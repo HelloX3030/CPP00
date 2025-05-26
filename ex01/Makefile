@@ -1,6 +1,6 @@
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++11
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME := phone_book
 
 # vpath for header files
