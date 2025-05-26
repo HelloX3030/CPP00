@@ -85,6 +85,26 @@ PhoneBook::~PhoneBook()
 {
 }
 
+PhoneBook::PhoneBook(const PhoneBook &other)
+{
+	for (int i = 0; i < 8; i++)
+		contacts[i] = other.contacts[i];
+	index = other.index;
+	count = other.count;
+}
+
+PhoneBook &PhoneBook::operator=(const PhoneBook &other)
+{
+	if (this != &other)
+	{
+		for (int i = 0; i < 8; i++)
+			contacts[i] = other.contacts[i];
+		index = other.index;
+		count = other.count;
+	}
+	return (*this);
+}
+
 void PhoneBook::addContact()
 {
 	std::string firstName = getInput("Enter first name: ");

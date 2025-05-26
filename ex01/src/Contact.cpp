@@ -43,24 +43,6 @@ Contact &Contact::operator=(const Contact &other)
 	return (*this);
 }
 
-Contact::Contact(Contact &&other) noexcept
-{
-	*this = std::move(other);
-}
-
-Contact &Contact::operator=(Contact &&other) noexcept
-{
-	if (this != &other)
-	{
-		this->firstName = std::move(other.firstName);
-		this->lastName = std::move(other.lastName);
-		this->nickname = std::move(other.nickname);
-		this->phoneNumber = std::move(other.phoneNumber);
-		this->darkestSecret = std::move(other.darkestSecret);
-	}
-	return (*this);
-}
-
 std::string Contact::getFirstName() const
 {
 	return (firstName);

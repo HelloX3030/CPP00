@@ -20,8 +20,6 @@ class Contact
 	~Contact();
 	Contact(const Contact &other);
 	Contact &operator=(const Contact &other);
-	Contact(Contact &&other) noexcept;
-	Contact &operator=(Contact &&other) noexcept;
 
 	std::string getFirstName() const;
 	std::string getLastName() const;

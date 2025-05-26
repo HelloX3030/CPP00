@@ -15,6 +15,8 @@ class PhoneBook
   public:
 	PhoneBook();
 	~PhoneBook();
+	PhoneBook(const PhoneBook &other);
+	PhoneBook &operator=(const PhoneBook &other);
 
 	void addContact();
 	void searchContact();
