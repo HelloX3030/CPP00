@@ -4,3 +4,4 @@ obj/
 tests.cpp
 *.log
 test_account
+.vscode/
