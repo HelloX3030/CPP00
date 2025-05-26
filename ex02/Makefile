@@ -1,5 +1,5 @@
 CXX := g++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++11
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 TEST_CXXFLAGS := $(CXXFLAGS) -Wno-error=deprecated-declarations
 NAME := account
 NAME_TEST := test_account
