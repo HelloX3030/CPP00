@@ -1,3 +1,6 @@
-./ex00/megaphone
-./ex01/phone_book
-/obj/
+megaphone
+phone_book
+obj/
+tests.cpp
+*.log
+test_account
