@@ -3,12 +3,6 @@ CXX := g++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 NAME := megaphone
 
-# .h and .hpp files
-H_FILES := 
-
-# vpath for source files
-vpath %.cpp src/
-
 # .cpp source files
 SRC_FILES := megaphone.cpp
 
@@ -27,7 +21,7 @@ $(NAME): $(OBJ_FILES)
 	$(CXX) $(OBJ_FILES) -o $(NAME)
 
 # Compile object files
-$(OBJ_DIR)/%.o: %.cpp $(H_FILES) | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -c $< -o $@
 
 # Create object directory if it doesn't exist
