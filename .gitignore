@@ -3,5 +3,5 @@ phone_book
 obj/
 tests.cpp
 *.log
-test_account
+account
 .vscode/
