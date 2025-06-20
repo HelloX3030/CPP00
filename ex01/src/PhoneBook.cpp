@@ -7,6 +7,8 @@ static std::string getInput(const std::string &prompt)
 	{
 		std::cout << prompt;
 		std::getline(std::cin, input);
+		if (input.empty())
+			std::cout << "Input cannot be empty. Please try again." << std::endl;
 	}
 	return (input);
 }
@@ -111,9 +113,13 @@ void PhoneBook::addContact()
 	std::string lastName = getInput("Enter last name: ");
 	std::string nickname = getInput("Enter nickname: ");
 	std::string phoneNumber;
+	phoneNumber = getInput("Enter phone number: ");
 	while (!validPhoneNumber(phoneNumber))
+	{
+		std::cerr << "Invalid phone number. Please enter a valid phone number." << std::endl;
 		phoneNumber = getInput("Enter phone number: ");
-	
+	}
+
 	std::string darkestSecret = getInput("Enter darkest secret: ");
 	if (count < 8)
 		count++;
